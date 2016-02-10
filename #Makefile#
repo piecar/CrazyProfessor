@@ -1,0 +1,18 @@
+reverse: reverse.o TaskA.o TaskB.o TaskC.o
+	gcc -o reverse reverse.o TaskA.o TaskB.o TaskC.o
+
+reverse.o: reverse.c tasks.h
+	gcc -c reverse.c
+
+TaskA.o: TaskA.c
+	gcc -c TaskA.c
+
+TaskB.o: TaskB.c
+	gcc -c TaskB.c
+
+TaskC.o: TaskC.c
+	gcc -c TaskC.c
+
+clean: rm -f reverse.o TaskA.o TaskB.o TaskC.o
+
+

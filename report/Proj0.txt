@@ -1,0 +1,22 @@
+Proj0 Report
+Submitted by Pierre Jimenez (1282331) and Eduardo Guerra (3963500)
+Classes used: Reverse, TaskA, TaskB, TaskC.
+
+Reverse: Accepts text filename input as arg[1] and the letter choice (A, B, or C) as arg[2]. Depending on the letter input, it branches into TaskA, TaskB, or TaskC.
+
+TaskA: Employs a two dimensional array to store the chars of the file with each row representing a line, and each column a char. Prints the lines in reverse order by starting at the last used row and decrementing until it reaches the 0th row.
+
+TaskB: Employs a two dimensional array to store the chars of the file with each row representing a line. Prints the characters of each line in reverse order by using strlen to find the last character and traversing it backwards by decreasing the index pointer. Once that completes it moves to the next line, this is looped until completion.
+
+TaskC: Employs a two dimensional array to store the chars of the file with each row representing a line. Prints the words in reversed order by finding the
+last character of the line and storing its index as the end variable. Scans until it finds a space or index 0, and stores
+it as start. Prints the characters from start to end. Once the index is 0, the next line is looped through. This is done until all lines have been printed.
+
+Makefile: Doesn't really work. Using the make command in the terminal gives the following error:
+/tmp/ccDALydR.o: In function `main':
+/aul/homes/pjime032/Desktop/ProgLang/proj0/reverse.c:9: undefined reference to `TaskA'
+/aul/homes/pjime032/Desktop/ProgLang/proj0/reverse.c:11: undefined reference to `TaskB'
+/aul/homes/pjime032/Desktop/ProgLang/proj0/reverse.c:13: undefined reference to `TaskC'
+
+However, if we use gcc reverse.c TaskA.c TaskB.c TaskC.c in the terminal, it will run smoothly and correctly.
+
